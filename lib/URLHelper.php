@@ -212,7 +212,7 @@ function getRealURL ($url, $simple = true, $method = "HEAD") {
                 do {
                     // find new location
                    	$buffer = fgets($conn, 4028);
-                    if (eregi("LOCATION:", $buffer)) {
+                    if (stripos($buffer, "LOCATION:") !== false) {
                         $tmp = substr(strstr($buffer, ":"), 1);
                         // is it relative?
                         if (strpos($tmp, '/') == 1)
@@ -226,7 +226,7 @@ function getRealURL ($url, $simple = true, $method = "HEAD") {
                 if (!$simple) {
                     do {
                        	$buffer = fgets($conn, 4028);
-                        if (eregi("ALLOW:", $buffer)) {
+                        if (stripos($buffer, "ALLOW:") !== false) {
                             $tmp = trim(substr(strstr($buffer, ":"), 1));
                             $allowed = explode(",", $tmp);
                             $url = URLHelper::getRealURL($url, $simple, $allowed[0]);
@@ -310,7 +310,7 @@ function getTitle($url) {
                  break; 
             } 
         } 
-        if (eregi("<title>(.*)</title>", $page, $out)) { 
+        if (preg_match('/<title>(.*)<\/title>/i', $page, $out)) { 
             return $out[1]; 
         } 
     return false; 

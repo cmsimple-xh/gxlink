@@ -705,7 +705,7 @@ function filterBadWords($str,$badWordsFile,$replaceChar="*",$showLetters=0,$rati
             //if my word rating is greater than my exceptable level bleep it out
         if($word_rating>$rating){
                 // look for and take out our bad word
-           $str = str_replace($badword, substr($badword,0,$showLetters).sprintf("%'".$replaceChar.(strlen($badword)-$showLetters)."s", NULL), $str);
+           $str = str_ireplace($badword, substr($badword,0,$showLetters).sprintf("%'".$replaceChar.(strlen($badword)-$showLetters)."s", NULL), $str);
         }
     }
     //return our formatted string
