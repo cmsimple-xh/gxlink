@@ -143,7 +143,7 @@ function _openHTTPConnection($url, $method = "HEAD") {
     if (!array_key_exists('port', $info)) { 
         $info["port"] = 80;
     }
-    $path = ($info["path"]) ? $info["path"] : "/"; 
+    $path = isset($info["path"]) ? $info["path"] : "/"; 
     if (@$info["query"]) {
         $path = $path . "?" . $info["query"]; 
     }
