@@ -76,7 +76,7 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
   }
 
   if (!isset($delink)) {
-  $delink = isset($_POST['delink']) ? $_POST['delink'] : (isset($_GET['dellink']) ? $_GET['delink'] : null);
+  $delink = isset($_POST['delink']) ? $_POST['delink'] : (isset($_GET['delink']) ? $_GET['delink'] : null);
   }
 
   if (!isset($edThisLink)) {
