@@ -477,7 +477,7 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
 					$validated = "<span class=\"good\">".$plugin_tx['gxlink']['approved']."&nbsp;&nbsp;&nbsp;&nbsp;<br>IP: ".$ip."</span>";
 				}	
 				
-				if ($tempCat == '' || $tempCat != $cat){
+				if (!(isset($tempCat)) || $tempCat == '' || $tempCat != $cat){
 						$o .= "<tr class=\"catDesc\"><td colspan=\"3\" class=\"catDesc\">".$cat." | <a class=\"checkButton\" href=\"".$refbase."&catnr=".$catnr."&checkAllLinks=".$catnr."\" onClick=\"return confirmSubmit('".$plugin_tx['gxlink']['confirm_checkbrokenlinks']."')\">".$plugin_tx['gxlink']['checkcatbrokenlinks']." &raquo</a></td><td align=\"right\">".$plugin_tx['gxlink']['statposted']."</td></tr>";
 				}	
 				$o .= "<tr class=\"links\" bgcolor=\"$row_color\">";

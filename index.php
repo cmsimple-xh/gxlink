@@ -51,17 +51,17 @@ $badwordsfile         = $gxlink_pluginfolder."/config/".$plugin_cf['gxlink']['Ba
 // Some variables
 
 if (!isset($catname)) {
-  $catname = isset($_POST['catname']) ? $_POST['catname'] : $_GET['catname'];
+  $catname = isset($_POST['catname']) ? $_POST['catname'] : (isset($_GET['catname']) ? $_GET['catname'] : null);
 } else {
   if ( empty($catname) ) {
-    $catname = isset($_POST['catname']) ? $_POST['catname'] : $_GET['catname'];
+    $catname = isset($_POST['catname']) ? $_POST['catname'] : (isset($_GET['catname']) ? $_GET['catname'] : null);
   } else {
     $plugin_cf['gxlink']['showCats'] = 0;  
   }
 }
 
 if (!isset($q)) {
-  $q = isset($_POST['q']) ? $_POST['q'] : $_GET['q'];
+  $q = isset($_POST['q']) ? $_POST['q'] : (isset($_GET['q']) ? $_GET['q'] : null);
 }
 
 if (!isset($database)) {
@@ -69,23 +69,23 @@ if (!isset($database)) {
 }
 
 if (!isset($url)) {
-  $url = isset($_POST['url']) ? $_POST['url'] : $_GET['url'];
+  $url = isset($_POST['url']) ? $_POST['url'] : (isset($_GET['url']) ? $_GET['url'] : null);
 }
 
 if (!isset($linkname)) {
-  $linkname = isset($_POST['linkname']) ? $_POST['linkname'] : $_GET['linkname'];
+  $linkname = isset($_POST['linkname']) ? $_POST['linkname'] : (isset($_GET['linkname']) ? $_GET['linkname'] : null);
 }
 
 if (!isset($categ)) {
-  $categ = isset($_POST['categ']) ? $_POST['categ'] : $_GET['categ'];
+  $categ = isset($_POST['categ']) ? $_POST['categ'] : (isset($_GET['categ']) ? $_GET['categ'] : null);
 }
 
 if (!isset($linkdescr)) {
-  $linkdescr = isset($_POST['linkdescr']) ? $_POST['linkdescr'] : $_GET['linkdescr'];
+  $linkdescr = isset($_POST['linkdescr']) ? $_POST['linkdescr'] : (isset($_GET['linkdescr']) ? $_GET['linkdescr'] : null);
 }
 
 if (!isset($country)) {
-  $country = isset($_POST['country']) ? $_POST['country'] : $_GET['country'];
+  $country = isset($_POST['country']) ? $_POST['country'] : (isset($_GET['country']) ? $_GET['country'] : null);
 }
 
 // Variables who serves fight against spam 
@@ -94,7 +94,7 @@ if (isset($_POST['spamdate']) && is_numeric($_POST['spamdate'])) {
    $sendtime = (time() - $posted);
 }   
 
-$tmp .= "<!-- Code start - inserted by GXLink ".$gxlink_version." from http://xtc.xhonneux.com -->\r\n";
+$tmp = "<!-- Code start - inserted by GXLink ".$gxlink_version." from http://xtc.xhonneux.com -->\r\n";
 $tmp .= '<div id="GXLink">';
 
 
@@ -229,7 +229,7 @@ $tmp .= '<p>&nbsp;</p>';
 $tmp .=	'<table border="0" cellpadding="2" cellspacing="0" width="'.$plugin_cf['gxlink']['pageWidth'].'" class="linkTable" style="text-aglin:center">';
 
 // Check if the time for filling out the add form is greater then the configured value in $plugin_cf['gxlink']['minFillOutTime'] (to fight against spam robots)
-if ($sendtime > $plugin_cf['gxlink']['minFillOutTime'] ) {
+if (isset($sendtime) && $sendtime > $plugin_cf['gxlink']['minFillOutTime'] ) {
   // add link
   if ($url != '' && $linkname != '' && $categ != '') {
   	if ($linkdescr == '') {
@@ -588,7 +588,7 @@ if ($plugin_cf['gxlink']['allowLinkPosting'] == 1) {
 	$tmp .= '<select name="country">';
 	$countries=$db->executeQuery('SELECT * FROM countries ORDER BY iso');
 	while($countries->next()){   
-		list($nr,$iso,$pic,$desc_en)=$countries->getCurrentValues();
+		list($nr,$iso,$pic,$desc_en)=$countries->getCurrentValues() + array(null, null, null, null);
 		if ($iso != '') {
 			if ($plugin_cf['gxlink']['defaultCountry'] == $iso) {
 				$tmp .= '<option value="'.$iso.'" selected>'.$iso.' ('.$desc_en.')'.'</option>'.chr(13);
@@ -705,7 +705,7 @@ function filterBadWords($str,$badWordsFile,$replaceChar="*",$showLetters=0,$rati
             //if my word rating is greater than my exceptable level bleep it out
         if($word_rating>$rating){
                 // look for and take out our bad word
-           $str = eregi_replace($badword, substr($badword,0,$showLetters).sprintf("%'".$replaceChar.(strlen($badword)-$showLetters)."s", NULL), $str);
+           $str = str_replace($badword, substr($badword,0,$showLetters).sprintf("%'".$replaceChar.(strlen($badword)-$showLetters)."s", NULL), $str);
         }
     }
     //return our formatted string
