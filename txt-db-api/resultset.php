@@ -1574,7 +1574,7 @@ class ResultSetParser {
 			Line Parse Functions
 	************************************/
 	
-	function ResultSetParser() {
+	function __construct() {
 		$this->escapeCodeRead=array(TABLE_FILE_ESCAPE_CHAR."h", 
 									TABLE_FILE_ESCAPE_CHAR."n",
 									TABLE_FILE_ESCAPE_CHAR."r", 

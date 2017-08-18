@@ -116,7 +116,7 @@ class Expression {
 		 		Constructor
 	************************************/
 	
-	function Expression($expr_str="") {
+	function __construct($expr_str="") {
 		$this->expr_str=$expr_str;
 	}
 	

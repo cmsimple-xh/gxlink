@@ -88,7 +88,7 @@ class StringParser {
 	************************************/ 
 	
 	// Constructor
-	function StringParser() {
+	function __construct() {
 	    // default config
 	    $this->quoteChars=array("'","\"");
 	    $this->escapeChar="\\";

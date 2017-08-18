@@ -46,7 +46,7 @@ class Database  {
 		 		Constructor
 	************************************/
 	
-    function Database($dbFolder="defaultDb/") {    	    	
+    function __construct($dbFolder="defaultDb/") {    	    	
     	$this->dbFolder= DB_DIR . $dbFolder;
     	if(last_char($this->dbFolder) != "/")
     		$this->dbFolder .= "/";

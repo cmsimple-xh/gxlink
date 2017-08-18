@@ -60,7 +60,7 @@ class SqlParser extends StringParser {
 	/***********************************
 		 		Constructor
 	************************************/
-	function SqlParser($sql_query_str) {
+	function __construct($sql_query_str) {
 	    
 		debug_print ("New SqlParser instance: $sql_query_str<br>");
 		global $g_sqlQuerySpecialStrings;
@@ -898,7 +898,7 @@ class SqlQuery {
 				Constructor
 	************************************/
 	
-	function SqlQuery($type="SELECT", $colNames=array(), $tables=array(), $colAliases=array(), $colTables=array(), $where_expr="", $groupColumns=array(), $orderColumns=array(),$orderTypes=array(),$limit=array()) {
+	function __construct($type="SELECT", $colNames=array(), $tables=array(), $colAliases=array(), $colTables=array(), $where_expr="", $groupColumns=array(), $orderColumns=array(),$orderTypes=array(),$limit=array()) {
 	
 		$this->type=$type;
 		$this->colNames=$colNames;
