@@ -3,8 +3,6 @@
 if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministration('gxlink')
 			|| isset($gxlink)) {
 
-  session_start();
-
   //check if register_globals is turned OFF
   if (!ini_get ("register_globals")){
       extract($HTTP_GET_VARS);
