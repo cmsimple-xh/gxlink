@@ -19,8 +19,6 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
   $gxlink_plugin            = basename(dirname(__FILE__),'/');
   $gxlink_pluginfolder      = $pth['folder']['plugins'].$gxlink_plugin;         # folder where the plugin resides
   $refbase              = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.'&'.$gxlink_plugin.'&admin=plugin_main&action=plugin_text';   # base for the references 
-  $admin= isset($_POST['admin']) ? $_POST['admin'] : $_GET['admin'];
-  $action= isset($_POST['action']) ? $_POST['action'] : $_GET['action'];
   
   
   // check, if value for $database set in form getDB? (Warum erlaubst Du auch $GET?)
