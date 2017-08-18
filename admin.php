@@ -1,6 +1,7 @@
 <?php
 
-if(isset($gxlink)) {
+if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministration('gxlink')
+			|| isset($gxlink)) {
 
   session_start();
 
