@@ -25,7 +25,7 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
   
   // check, if value for $database set in form getDB? (Warum erlaubst Du auch $GET?)
   if (!isset($database)) {
-  	$database = isset($_POST['database']) ? $_POST['database'] : $_GET['database'];
+  	$database = isset($_POST['database']) ? $_POST['database'] : (isset($_GET['database']) ? $_GET['database'] : null);
   }
   
   // if even empty look for a session var
@@ -46,85 +46,85 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
    
 
   if (!isset($addcat)) {
-  $addcat = isset($_POST['addcat']) ? $_POST['addcat'] : $_GET['addcat'];
+  $addcat = isset($_POST['addcat']) ? $_POST['addcat'] : (isset($_GET['addcat']) ? $_GET['addcat'] : null);
   }
 
   if (!isset($edcatid)) {
-  $edcatid = isset($_POST['edcatid']) ? $_POST['edcatid'] : $_GET['edcatid'];
+  $edcatid = isset($_POST['edcatid']) ? $_POST['edcatid'] : (isset($_GET['edcatid']) ? $_GET['edcatid'] : null);
   }
 
   if (!isset($edlink)) {
-  $edlink = isset($_POST['edlink']) ? $_POST['edlink'] : $_GET['edlink'];
+  $edlink = isset($_POST['edlink']) ? $_POST['edlink'] : (isset($_GET['edlink']) ? $_GET['edlink'] : null);
   }
 
   if (!isset($checklink)) {
-  $checklink = isset($_POST['checklink']) ? $_POST['checklink'] : $_GET['checklink'];
+  $checklink = isset($_POST['checklink']) ? $_POST['checklink'] : (isset($_GET['checklink']) ? $_GET['checklink'] : null);
   }
 
   if (!isset($checkAllLinks)) {
-  $checkAllLinks = isset($_POST['checkAllLinks']) ? $_POST['checkAllLinks'] : $_GET['checkAllLinks'];
+  $checkAllLinks = isset($_POST['checkAllLinks']) ? $_POST['checkAllLinks'] : (isset($_GET['checkAllLinks']) ? $_GET['checkAllLinks'] : null);
   }
 
   if (!isset($app)) {
-  $app = isset($_POST['app']) ? $_POST['app'] : $_GET['app'];
+  $app = isset($_POST['app']) ? $_POST['app'] : (isset($_GET['app']) ? $_GET['app'] : null);
   }
 
   if (!isset($linkstatus)) {
-  $linkstatus = isset($_POST['linkstatus']) ? $_POST['linkstatus'] : $_GET['linkstatus'];
+  $linkstatus = isset($_POST['linkstatus']) ? $_POST['linkstatus'] : (isset($_GET['linkstatus']) ? $_GET['linkstatus'] : null);
   }
 
   if (!isset($delcat)) {
-  $delcat = isset($_POST['delcat']) ? $_POST['delcat'] : $_GET['delcat'];
+  $delcat = isset($_POST['delcat']) ? $_POST['delcat'] : (isset($_GET['delcat']) ? $_GET['delcat'] : null);
   }
 
   if (!isset($delink)) {
-  $delink = isset($_POST['delink']) ? $_POST['delink'] : $_GET['delink'];
+  $delink = isset($_POST['delink']) ? $_POST['delink'] : (isset($_GET['dellink']) ? $_GET['delink'] : null);
   }
 
   if (!isset($edThisLink)) {
-  $edThisLink = isset($_POST['edThisLink']) ? $_POST['edThisLink'] : $_GET['edThisLink'];
+  $edThisLink = isset($_POST['edThisLink']) ? $_POST['edThisLink'] : (isset($_GET['edThisLink']) ? $_GET['edThisLink'] : null);
   }
 
   if (!isset($url)) {
-    $url = isset($_POST['url']) ? $_POST['url'] : $_GET['url'];
+    $url = isset($_POST['url']) ? $_POST['url'] : (isset($_GET['url']) ? $_GET['url'] : null);
   }
   
   if (!isset($name)) {
-    $name = isset($_POST['name']) ? $_POST['name'] : $_GET['name'];
+    $name = isset($_POST['name']) ? $_POST['name'] : (isset($_GET['name']) ? $_GET['name'] : null);
   }
   
   if (!isset($categ)) {
-    $categ = isset($_POST['categ']) ? $_POST['categ'] : $_GET['categ'];
+    $categ = isset($_POST['categ']) ? $_POST['categ'] : (isset($_GET['categ']) ? $_GET['categ'] : null);
   }
   
   if (!isset($appAll)) {
-    $appAll = isset($_POST['appAll']) ? $_POST['appAll'] : $_GET['appAll'];
+    $appAll = isset($_POST['appAll']) ? $_POST['appAll'] : (isset($_GET['appAll']) ? $_GET['appAll'] : null);
   }
 
   if (!isset($catnr)) {
-  $catnr = isset($_POST['catnr']) ? $_POST['catnr'] : $_GET['catnr'];
+  $catnr = isset($_POST['catnr']) ? $_POST['catnr'] : (isset($_GET['catnr']) ? $_GET['catnr'] : null);
   }
 
   if (!isset($catname)) {
-  $catname = isset($_POST['catname']) ? $_POST['catname'] : $_GET['catname'];
+  $catname = isset($_POST['catname']) ? $_POST['catname'] : (isset($_GET['catname']) ? $_GET['catname'] : null);
   $catname = addslashes($catname);
   }
 
   if (!isset($catdesc)) {
-  $catdesc = isset($_POST['catdesc']) ? $_POST['catdesc'] : $_GET['catdesc'];
+  $catdesc = isset($_POST['catdesc']) ? $_POST['catdesc'] : (isset($_GET['catdesc']) ? $_GET['catdesc'] : null);
   $catdesc = addslashes($catdesc);
   }
 
   if (!isset($oldcat)) {
-  $oldcat = isset($_POST['oldcat']) ? $_POST['oldcat'] : $_GET['oldcat'];
+  $oldcat = isset($_POST['oldcat']) ? $_POST['oldcat'] : (isset($_GET['oldcat']) ? $_GET['oldcat'] : null);
   }
 
   if (!isset($descr)) {
-  $descr = isset($_POST['descr']) ? $_POST['descr'] : $_GET['descr'];
+  $descr = isset($_POST['descr']) ? $_POST['descr'] : (isset($_GET['descr']) ? $_GET['descr'] : null);
   }
   
   if (!isset($country)) {
-  $country = isset($_POST['country']) ? $_POST['country'] : $_GET['country'];
+  $country = isset($_POST['country']) ? $_POST['country'] : (isset($_GET['country']) ? $_GET['country'] : null);
   }
 
   // $dblist contains all directory names starting with 'DB' (database directories)
