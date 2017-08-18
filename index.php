@@ -31,8 +31,6 @@
 
 //error_reporting(E_ALL);
 
-session_start();
-
 $gxlink_plugin            = basename(dirname(__FILE__),'/');
 $gxlink_pluginfolder      = $pth['folder']['plugins'].$gxlink_plugin;         # folder where the plugin resides
 $API_HOME_DIR         = $gxlink_pluginfolder.'/txt-db-api/';              # folder where the txt-db-api resides
@@ -568,7 +566,7 @@ if ($plugin_cf['gxlink']['showCats'] == 2 || $plugin_cf['gxlink']['showCats'] ==
 	}
 
 $tmp .= '<a name="bottom"> </a>';
-if ($plugin_cf['gxlink']['allowLinkPosting'] == 1 || $_SESSION['auth'] == true) {
+if ($plugin_cf['gxlink']['allowLinkPosting'] == 1) {
 	$tmp .= '<form name="test" action="'.$refbase.'" method="post" onsubmit="return checkUrl(document.test.url.value);">';
 	$tmp .= '<table border="0" cellpadding="1" cellspacing="0" style="text-align:center">';
 	$tmp .= '<tr>';

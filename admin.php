@@ -49,38 +49,6 @@ if (!ini_get('register_globals')) {
   $admin= isset($_POST['admin']) ? $_POST['admin'] : $_GET['admin'];
   $action= isset($_POST['action']) ? $_POST['action'] : $_GET['action'];
   
-  // Check for some variables
-  
-  /**** Cookie-Variante
-
-  // check, if value for $database set in form getDB?
-  if (!isset($database)) {
-  	$database = isset($_POST['database']) ? $_POST['database'] : $_GET['database'];
-  }
-  
-  // if even empty look for a cookie
-  if (!isset($database)) {
-  	
-  	if (!isset($_COOKIE)) {
-	global $_COOKIE;
-	$_COOKIE = $GLOBALS['HTTP_COOKIE_VARS'];
-  	}
-  
-  	if (isset($_COOKIE['gxlink_database'])) {
-		$database = $_COOKIE['gxlink_database'];
-  	}
-  }
-
-  // no cookie and no $GET / $POST ?
-  if (!isset($database)) {
-    $database = 'DBlink'; //set default value and then set a cookie
-  }
-  
-  setcookie("gxlink_database", $database, false, '/', false, 0);
-  
-  ****************************************************************************************/  
-  
-  //**** Session-Variante:
   
   // check, if value for $database set in form getDB? (Warum erlaubst Du auch $GET?)
   if (!isset($database)) {
@@ -90,17 +58,18 @@ if (!ini_get('register_globals')) {
   // if even empty look for a session var
   if (!isset($database)) {
  
-  	if (isset($_SESSION["gxlink_database"])) {
-		$database = $_SESSION["gxlink_database"];
+  	if (isset($_COOKIE["gxlink_database"])) {
+		$database = $_COOKIE["gxlink_database"];
   	}
   }
 
-  // no session var and no $GET / $POST ?
+  // no COOKIE and no $GET / $POST ?
   if (!isset($database)) {
-    $database = 'DBlink'; //set default value and then set a session var
+    $database = 'DBlink'; //set default value and then set a cookie var
   }
   
-  $_SESSION["gxlink_database"] = $database;  
+  $_COOKIE["gxlink_database"] = $database;
+	setcookie("gxlink_database", $database, 0, CMSIMPLE_ROOT);
    
 
   if (!isset($addcat)) {
