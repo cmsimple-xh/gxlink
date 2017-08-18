@@ -1,0 +1,175 @@
+CHANGES:
+========
+
+Legend:
+# -> Bug Fix
++ -> Addition
+^ -> Change
+- -> Removed
+! -> Note
+
+Version XH 1.5:
+---------------
+
++ Support for UpdateCheck for CMSimple_XH (http://cmsimple.holgerirmler.de/?Plugins:UpdateCheck)
+
+
+Version XH 1.4:
+---------------
+
+^ UTF-8 encoding
+# $desc "killed" by preg_replace
++ Italian language file (thanks to Giancarlo Bruschini)
+
+
+Version XH 1.3 beta 4:
+----------------------
+
+^ compatbility changes for PHP5 (thanks for the hints to doczimut)
+# "<?" replaced by "<?php" in config.php
+# "ereg_replace" replaced by "preg_replace" in different code files
+# addslashes for $catname and $catdesc in admin.php
+
+
+Version XH 1.3 beta 3:
+----------------------
+
+# After Gerts mods, the description for new links was not shown
+^ Replaced all 'bgcolor=".."' and 'align=".."' by 'style="background-color:#xyz; text-align:blabla;"'
+# Default country was not marked as selected in option list
+
+
+Version XH 1.3 beta 2:
+----------------------
+
+^ Thanks to Gert Ebersbach from http://www.ge-webdesign.de GXLink is now (X)HTML validated and renamed to GXLink XH (see http://www.cmsimple-xh.de) 
+
+
+Version 1.3 beta 1:
+-------------------
+
++ Bad Word / Vulgar Word Filter Script 
+
+
+Version 1.2 final:
+------------------
+
+# Approve links in admin didn't work when "register_globals=off". Emulate now "register_globals=on" in admin.php
++ Czech language file (thanks to Josef Kratochvil)
++ Japanese language file (thanks to http://cmsimple.bbfriend.net/)
+
+
+Version 1.2 beta 5:
+-------------------
+
+- Some empty <td>s removed
+^ Changed some widths from <td>s
+
+
+Version 1.2 beta 4:
+-------------------
+
++ Spam protection for add form included (see http://webdesign.weisshart.de/kommentar-spam.php)
+^ When $plugin_cf['gxlink']['showNewLinks'] is off, all informations (picture too) about new links will be hidden 
+
+
+Version 1.2 beta 3:
+-------------------
+
+# Some variables weren't declared correctly => was the cause of some bugs
++ Visited links are marked with a "V" (CSS) to distinguish them
+^ Javascript message when a link allready exists was replaced by a PHP-generated HTML-Message
++ Confirmation message when a new link was added to the database (Thanks to Holger)
+
+
+Version 1.2 beta 2:
+-------------------
+
+^ Backend changed to work with the new country file
+^ Backend changed to work correct with register_globals off
+^ Mod from tata for special declination cases (see $plugin_tx['gxlink']['descLinksInDb2a'] etc.) in some east europe languages
+^ Variable $status renamed to $linkstatus to avoid conflicts
+# Name of database was not kept in backend in case of multiple choice (Thanks to Holger for his help!)
+^ Name of database is now in session variable (or cookie) (see above)
+
+
+Version 1.2 beta 1:
+-------------------
+
+^ Country file has a new structure and contains now all countries as in ISO3166-1 alpha 2
+! This new country file IS NOT backward compatible and old link files have to be adjusted MANUALY.
++ There are flags (from http://www.famfamfam.com) for each country in ./images/countries/ who should be shown instead of ISO code using the new config parameter $plugin_cf['gxlink']['showCountryPic'] 
+
+
+Version 1.1:
+------------
+
+# $plugin_cf['gxlink']['defaultCountry'] was not the default option
+# quota bug in netherland language file (white page error when using NL)
+
+
+Version 1.0:
+------------
+
++ Database could be choosed in administration
+^ Version number comes now from variable
+
+
+Version 0.1 beta 6:
+-------------------
+
+# Bug resolved when calling GXLink() with empty $catname
+# Error corrected in german and english help files
+# Deleted a superfluous <div> 
+^ New version of titles.js
+
+
+Version 0.1 beta 5:
+-------------------
+
++ French help file (thanks to Bob)
+^ renamed $gx_plugin to $gxlink_plugin and $gx_pluginfolder to $gxlink_pluginfolder
+# Function extract() (POST & GET vars) commented out du to problems with the print version from CMSimple
+
+
+Version 0.1 beta 4:
+-------------------
+
+^ New CSS classes instead of .links anywhere
+^ PHP5 support: upgrade from txt-db-api version 0.2.2-Beta-01 to 0.3.1-Beta-01
+
+
+Version 0.1 beta 3:
+-------------------
+
++ Slovak language (thanks to tata)
+# $plugin was not declared in admin.php since version 0.1 beta 2
+
+
+Version 0.1 beta 2:
+-------------------
+
++ Netherlands language file (thanks to voorstad)
++ english and german help file
+# renamed $plugin to $gx_plugin and $pluginfolder to $gx_pluginfolder (thanks to djot)
+# changed GLOBAL to global (thanks to djot)
+^ function parse_search() is outside from function gxlink()
+
+
+Version 0.1 beta 1:
+-------------------
+
++ admin.php
++ folder "lib"
+^ standard database folder is now "DBlink" instead of "linkDB" 
+
+
+2DO:
+----
+
+* Description in different languages?
+* Captcha in add form?
+* Sort links in different manner (alpha, age, ...) and descending too.
+* http://www.drweb.de/usability/im-neuen-fenster.shtml ?
+* Show country or not show country in the config
+* Add links in the admin 

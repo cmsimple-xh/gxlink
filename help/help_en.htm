@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>GX Link plugin for CMSimple</title>
+</head>
+<body>
+<p><strong><u>About GX Link plugin for CMSimple</u></strong></p>
+<p>The GX Link plugin is a script designed to organize categorized link collections like web catalogues.</p>
+<p>It is a plugin for <a href="http://www.cmsimple.org">CMSimple</a>.</p>
+<br>
+<p><strong><u>Features</strong></u></p>
+<ul>
+<li>Flat file based (no database like MySQL needed)</li>
+<li>Unlimitted databases, categories and links</li>
+<li>Multi language</li>
+<li>Extremly configurable due to a multitude of parameters</li>
+<li>Customizable layout with CSS</li>
+<li>Admin interface</li>
+<li>Check for broken links and show them or not</li>
+<li>Possibility for visitors to add links with email notification for admin</li>
+<li>Approve or disapprove links by admin</li>
+<li>Show new links on top</li>
+<li>Search function for links</li>
+<li>...</li>
+</ul>
+<br>
+<p><strong><u>How to use this plugin?<p></strong></u>
+<p><strong>Installing GXLink</strong></p>
+<p>You just copy the plugin into the plugin folder from CMSimple - that's it!!!</p>
+<p>Ok, since you want something to be edited and saved it will be required to chmod some folders and files. In the plugin folder you will have four folders - config, css, languages and DBlink (and all other DB folders if you want to have some) - which you have to chmod 777. Same for the files in these folders.</p>
+<p>Furthermore, you have to call the plugin in your content. Simply add the following line where you want to have the result:</p>
+<p><i>{{{gxlink();}}}</i></p>
+<p>You could give two additional variables to the function: the categorie and/or the name of the database (default "DBlink"). 
+This example calls just the categorie "Search Engines" from the default database:</p>
+<p><i>{{{gxlink("Search Engines");}}}</i></p>
+<p><strong>Configuring GXLink</strong></p>
+<p>There are a set of variables in the configuration that you should look over and tweak to your liking.</p>
+<table style="text-align: left; width: 100%;" border="1"  cellpadding="2" cellspacing="2">
+<tr>
+<td style="text-align: center;"><strong>Variable</strong></td>
+<td style="text-align: center;"><strong>Value</strong></td>
+</tr>
+<tr>
+<td>allowLinkPosting</td>
+<td>1 = allow that visitors add links<br>
+0 = disallow</td>
+</tr>
+<tr>
+<td>showAllLinksDefault</td>
+<td>1 = show all links on startpage<br>
+0 = don't</td>
+</tr>
+<tr>
+<td>showApprovedLinksOnly</td>
+<td>1 = only show approved links<br>
+0 = show non approved links too</td>
+</tr>
+<tr>
+<td>doNotShowBroken</td>
+<td>0 = show broken links too<br>
+1 = don't show broken links</td>
+</tr>
+<tr>
+<td>showNewLinks</td>
+<td>1 = show new links on top of page<br>
+0 = don't</td>
+</tr>
+<tr>
+<td>iNewLinks</td>
+<td>Number of links to list as new links</td>
+</tr>
+<tr>
+<td>showIP</td>
+<td>0 = Don't show<br>
+1 = Show IP of the person who posted the link if link is not approved</td>
+</tr>
+<tr>
+<td>showTitle</td>
+<td>1 = Show title<br>
+0 = don't</td>
+</tr>
+</tr>
+<tr>
+<td>showSearch</td>
+<td>1 = Show search dialog<br>
+0 = don't</td>
+</tr>
+<tr>
+<td>showDescr</td>
+<td>1 = Show description of links in table<br>
+0 = Show description of links as a tooltip</td>
+</tr>
+<tr>
+<td>notifyMail</td>
+<td>0 = don't notify by email<br>
+1 = get email when new link is posted</td>
+</tr>
+<tr>
+<td>mailTo</td>
+<td>Email address where you want the email  notification to be sent. More than one, separate several emails with a comma.</td>
+</tr>
+<tr>
+<td>defaultCountry</td>
+<td>Default country in country select (case sensitive).</td>
+</tr>
+<tr>
+<td>showCats</td>
+<td>Where to show the link categories<br>
+0 = don't show<br>
+1 = Top<br>
+2 = Bottom<br>
+3 = Top and bottom<br> 
+4 = left<br>
+5 = right</td>
+</tr>
+<tr>
+<td>numCatRow</td>
+<td>Number of categories on each row (if showCats is set to top or bottom)</td>
+</tr>
+<tr>
+<tr>
+<td>color1</td>
+<td>Color on linkrow 1</td>
+</tr>
+<tr>
+<tr>
+<td>color2</td>
+<td>Color on linkrow 2</td>
+</tr>
+<tr>
+<tr>
+<td>pageWidth</td>
+<td>Width of webpage</td>
+</tr>
+<tr>
+<tr>
+<td>tableAlign</td>
+<td>How to align main link table<br> 
+Values = "Left", "Center", "Right"</td>
+</tr>
+<tr>
+<td>showCountryPic</td>
+<td>1= show country as picture if available<br> 
+0 = show country as ISO code</td>
+</tr>
+<tr>
+<td>minFillOutTime</td>
+<td>Minimum time in secondes to fill out the formular to add links<br> 
+Spam protection</td>
+</tr>
+<tr>
+<td>BadWordsFile</td>
+<td>Name of the bad words file<br>
+The first character number is the bad word "rating". The higher the number the worse the word. This could be useful in the future for tolerance puposes. 
+</td>
+</tr>
+<tr>
+<td>BadWordRating</td>
+<td>Tolerance for filtering the bad words<br>
+The filter will only remove words with a tolerance rating higher than this value. 
+</td>
+</tr>
+<tr>
+<td>BadWordshowLetters</td>
+<td>Number of letters to show from a found bad word
+</td>
+</tr>
+<tr>
+<td>BadWordreplaceChar</td>
+<td>Character you want to use as the bad word "bleeper"
+</td>
+</tr>
+</table>
+<br>
+<p><strong><u>Warranty</strong></u></p>
+<p>There is <strong>no warrenty</strong> using this plugin. It will be used on everybody's own risk. We will not assume any liability in case of data losses caused by GXLink usage.</p>
+<br>
+<p><strong><u>Where to find GXLink?</strong></u></p>
+<p>The latest version of GXLink could be <a href="http://xtc.xhonneux.com/?Projekte/GXLink/Download">downloaded here</a>.</p>
+<br>
+<p><strong><u>Help and questions</strong></u></p>
+<p>Help and questions only in <a href="http://www.cmsimpleforum.com/">CMSimple forum</a> and/or <a href="http://www.cmsimplewiki.com/">CMSimple wiki</a> please.</p>
+<br>
+<p><strong><u>See a way GXLink can be improved?</strong></u></p>
+<p>I am not an expert on PHP, so if you see a way to improve on any aspect this plugin, just <a href="http://xtc.xhonneux.com/#footer-wrapper">contact me over my website</a>.</p>
+<p>&nbsp;</p>
+<p>© 2007-2015 by Gerd Xhonneux, xtc</p>
+</body>
+</html>

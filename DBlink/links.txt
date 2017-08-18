@@ -1,0 +1,11 @@
+nr#name#url#descr#country#ip#approved#category#statuscode
+inc#str#str#str#str#str#int#str#str
+########
+1#Google#http://www.google.com#The No.1 Search Engine!#US#192.168.0.111#1#Search Engines#302
+2#Altavista#http://www.altavista.com#Altavista the former No.1 search engine#US#192.168.0.111#1#Search Engines#200
+3#PHP.NET#http://www.php.net#PHP  is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.#US#192.168.0.111#1#PHP - Resources#200
+4#Hotscripts#http://www.hotscripts.com#HotScripts.com is an Internet directory that compiles and disseminates Web programming-related resources.#US#192.168.0.111#1#PHP - Scripts#200
+5#Sourceforge.net#http://sourceforge.net#SourceForge.net is the worlds largest Open Source software development website, with the largest repository of Open Source code and applications available on the Internet. SourceForge.net provides free services to Open Source developers.#US#192.168.0.111#1#Programming General#200
+6#xtc#http://xtc.xhonneux.com#Website from xtc#BE#192.168.0.111#1#Personal Web Sites#200
+7#PHP Resource Index#http://php.resourceindex.com/Complete_Scripts/#Find PHP scripts here#US#192.168.0.111#1#PHP - Scripts#200
+8#Webmonkey#http://webmonkey.wired.com/webmonkey/programming/php/#The Webdeveloper's resource#US#192.168.0.111#1#PHP - Resources#200

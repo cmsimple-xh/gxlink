@@ -1,0 +1,8 @@
+nr#name#descr
+inc#str#str
+##
+1#PHP - Scripts#All your scripts here!
+2#Search Engines#Different Search Engines in here
+3#Personal Web Sites#Post your own website here!
+4#Programming General#Anything about programming goes here!
+5#PHP - Resources#PHP  is a widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.

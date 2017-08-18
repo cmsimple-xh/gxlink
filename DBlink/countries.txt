@@ -1,0 +1,252 @@
+nr#iso#pic#desc_en
+
+inc#str#str#str
+
+##
+
+1#AD#ad.gif#Andorra#
+2#AE#ae.gif#United Arab Emirates#
+3#AF#af.gif#Afghanistan#
+4#AG#ag.gif#Antigua and Barbuda#
+5#AI#ai.gif#Anguilla#
+6#AL#al.gif#Albania#
+7#AM#am.gif#Armenia#
+8#AN#an.gif#Netherlands Antilles#
+9#AO#ao.gif#Angola#
+10#AQ#aq.gif#Antarctica#
+11#AR#ar.gif#Argentina#
+12#AS#as.gif#American Samoa#
+13#AT#at.gif#Austria#
+14#AU#au.gif#Australia#
+15#AW#aw.gif#Aruba#
+16#AX#ax.gif#Åland Islands#
+17#AZ#az.gif#Azerbaijan#
+18#BA#ba.gif#Bosnia and Herzegovina#
+19#BB#bb.gif#Barbados#
+20#BD#bd.gif#Bangladesh#
+21#BE#be.gif#Belgium#
+22#BF#bf.gif#Burkina Faso#
+23#BG#bg.gif#Bulgaria#
+24#BH#bh.gif#Bahrain#
+25#BI#bi.gif#Burundi#
+26#BJ#bj.gif#Benin#
+27#BL#bl.gif#Saint Barthélemy#
+28#BM#bm.gif#Bermuda#
+29#BN#bn.gif#Brunei Darussalam#
+30#BO#bo.gif#Bolivia#
+31#BR#br.gif#Brazil#
+32#BS#bs.gif#Bahamas#
+33#BT#bt.gif#Bhutan#
+34#BV#bv.gif#Bouvet Island#
+35#BW#bw.gif#Botswana#
+36#BY#by.gif#Belarus#
+37#BZ#bz.gif#Belize#
+38#CA#ca.gif#Canada#
+39#CC#cc.gif#Cocos (Keeling) Islands#
+40#CD#cd.gif#Congo#
+41#CF#cf.gif#Central African Republic#
+42#CG#cg.gif#Congo#
+43#CH#ch.gif#Switzerland#
+44#CI#ci.gif#Côte d'Ivoire#
+45#CK#ck.gif#Cook Islands#
+46#CL#cl.gif#Chile#
+47#CM#cm.gif#Cameroon#
+48#CN#cn.gif#China#
+49#CO#co.gif#Colombia#
+50#CR#cr.gif#Costa Rica#
+51#CU#cu.gif#Cuba#
+52#CV#cv.gif#Cape Verde#
+53#CX#cx.gif#Christmas Island#
+54#CY#cy.gif#Cyprus#
+55#CZ#cz.gif#Czech Republic#
+56#DE#de.gif#Germany#
+57#DJ#dj.gif#Djibouti#
+58#DK#dk.gif#Denmark#
+59#DM#dm.gif#Dominica#
+60#DO#do.gif#Dominican Republic#
+61#DZ#dz.gif#Algeria#
+62#EC#ec.gif#Ecuador#
+63#EE#ee.gif#Estonia#
+64#EG#eg.gif#Egypt#
+65#EH#eh.gif#Western Sahara#
+66#ER#er.gif#Eritrea#
+67#ES#es.gif#Spain#
+68#ET#et.gif#Ethiopia#
+69#FI#fi.gif#Finland#
+70#FJ#fj.gif#Fiji#
+71#FK#fk.gif#Falkland Islands #
+72#FM#fm.gif#Micronesia#
+73#FO#fo.gif#Faroe Islands#
+74#FR#fr.gif#France#
+75#GA#ga.gif#Gabon#
+76#GB#gb.gif#United Kingdom#
+77#GD#gd.gif#Grenada#
+78#GE#ge.gif#Georgia#
+79#GF#gf.gif#French Guiana#
+80#GG#gg.gif#Guernsey#
+81#GH#gh.gif#Ghana#
+82#GI#gi.gif#Gibraltar#
+83#GL#gl.gif#Greenland#
+84#GM#gm.gif#Gambia#
+85#GN#gn.gif#Guinea#
+86#GP#gp.gif#Guadeloupe#
+87#GQ#gq.gif#Equatorial Guinea#
+88#GR#gr.gif#Greece#
+89#GS#gs.gif#South Georgia and the South Sandwich Islands# 	
+90#GT#gt.gif#Guatemala#
+91#GU#gu.gif#Guam#
+92#GW#gw.gif#Guinea-Bissau#
+93#GY#gy.gif#Guyana#
+94#HK#hk.gif#Hong Kong#
+95#HM#hm.gif#Heard Island and McDonald Islands#
+96#HN#hn.gif#Honduras#
+97#HR#hr.gif#Croatia#
+98#HT#ht.gif#Haiti#
+99#HU#hu.gif#Hungary#
+100#ID#id.gif#Indonesia#
+101#IE#ie.gif#Ireland#
+102#IL#il.gif#Israel#
+103#IM#im.gif#Isle of Man#
+104#IN#in.gif#India#
+105#IO#io.gif#British Indian Ocean Territory#
+106#IQ#iq.gif#Iraq#
+107#IR#ir.gif#Iran#
+108#IS#is.gif#Iceland#
+109#IT#it.gif#Italy#
+110#JE#je.gif#Jersey#
+111#JM#jm.gif#Jamaica#
+112#JO#jo.gif#Jordan#
+113#JP#jp.gif#Japan#
+114#KE#ke.gif#Kenya#
+115#KG#kg.gif#Kyrgyzstan#
+116#KH#kh.gif#Cambodia#
+117#KI#ki.gif#Kiribati#
+118#KM#km.gif#Comoros#
+119#KN#kn.gif#Saint Kitts and Nevis#
+120#KP#kp.gif#North Korea#
+121#KR#kr.gif#South Korea#
+122#KW#kw.gif#Kuwait#
+123#KY#ky.gif#Cayman Islands#
+124#KZ#kz.gif#Kazakhstan#
+125#LA#la.gif#Lao#
+126#LB#lb.gif#Lebanon#
+127#LC#lc.gif#Saint Lucia#
+128#LI#li.gif#Liechtenstein#
+129#LK#lk.gif#Sri Lanka#
+130#LR#lr.gif#Liberia#
+131#LS#ls.gif#Lesotho#
+132#LT#lt.gif#Lithuania#
+133#LU#lu.gif#Luxembourg#
+134#LV#lv.gif#Latvia#
+135#LY#ly.gif#Libyan#
+136#MA#ma.gif#Morocco#
+137#MC#mc.gif#Monaco#
+138#MD#md.gif#Moldova#
+139#ME#me.gif#Montenegro#
+140#MF#mf.gif#Saint Martin#
+141#MG#mg.gif#Madagascar#
+142#MH#mh.gif#Marshall Islands#
+143#MK#mk.gif#Macedonia#
+144#ML#ml.gif#Mali#
+145#MM#mm.gif#Myanmar#
+146#MN#mn.gif#Mongolia#
+147#MO#mo.gif#Macao#
+148#MP#mp.gif#Northern Mariana Islands#
+149#MQ#mq.gif#Martinique#
+150#MR#mr.gif#Mauritania#
+151#MS#ms.gif#Montserrat#
+152#MT#mt.gif#Malta#
+153#MU#mu.gif#Mauritius#
+154#MV#mv.gif#Maldives#
+155#MW#mw.gif#Malawi#
+156#MX#mx.gif#Mexico#
+157#MY#my.gif#Malaysia#
+158#MZ#mz.gif#Mozambique#
+159#NA#na.gif#Namibia#
+160#NC#nc.gif#New Caledonia#
+161#NE#ne.gif#Niger#
+162#NF#nf.gif#Norfolk Island#
+163#NG#ng.gif#Nigeria#
+164#NI#ni.gif#Nicaragua#
+165#NL#nl.gif#Netherlands#
+166#NO#no.gif#Norway#
+167#NP#np.gif#Nepal#
+168#NR#nr.gif#Nauru#
+169#NU#nu.gif#Niue#
+170#NZ#nz.gif#New Zealand#
+171#OM#om.gif#Oman#
+172#PA#pa.gif#Panama#
+173#PE#pe.gif#Peru#
+174#PF#pf.gif#French Polynesia#
+175#PG#pg.gif#Papua New Guinea#
+176#PH#ph.gif#Philippines#
+177#PK#pk.gif#Pakistan#
+178#PL#pl.gif#Poland#
+179#PM#pm.gif#Saint Pierre and Miquelon#
+180#PN#pn.gif#Pitcairn#
+181#PR#pr.gif#Puerto Rico#
+182#PS#ps.gif#Palestinian Territory#
+183#PT#pt.gif#Portugal#
+184#PW#pw.gif#Palau#
+185#PY#py.gif#Paraguay#
+186#QA#qa.gif#Qatar#
+187#RE#re.gif#Réunion#
+188#RO#ro.gif#Romania#
+189#RS#rs.gif#Serbia#
+190#RU#ru.gif#Russian Federation#
+191#RW#rw.gif#Rwanda#
+192#SA#sa.gif#Saudi Arabia#
+193#SB#sb.gif#Solomon Islands#
+194#SC#sc.gif#Seychelles#
+195#SD#sd.gif#Sudan#
+196#SE#se.gif#Sweden#
+197#SG#sg.gif#Singapore#
+198#SH#sh.gif#Saint Helena#
+199#SI#si.gif#Slovenia#
+200#SJ#sj.gif#Svalbard and Jan Mayen#
+201#SK#sk.gif#Slovakia#
+202#SL#sl.gif#Sierra Leone#
+203#SM#sm.gif#San Marino#
+204#SN#sn.gif#Senegal#
+205#SO#so.gif#Somalia#
+206#SR#sr.gif#Suriname#
+207#ST#st.gif#Sao Tome and Principe#
+208#SV#sv.gif#El Salvador#
+209#SY#sy.gif#Syrian Arab Republic#
+210#SZ#sz.gif#Swaziland#
+211#TC#tc.gif#Turks and Caicos Islands#
+212#TD#td.gif#Chad#
+213#TF#tf.gif#French Southern Territories#
+214#TG#tg.gif#Togo#
+215#TH#th.gif#Thailand#
+216#TJ#tj.gif#Tajikistan#
+217#TK#tk.gif#Tokelau#
+218#TL#tl.gif#Timor-Leste#
+219#TM#tm.gif#Turkmenistan#
+220#TN#tn.gif#Tunisia#
+221#TO#to.gif#Tonga#
+222#TR#tr.gif#Turkey#
+223#TT#tt.gif#Trinidad and Tobago#
+224#TV#tv.gif#Tuvalu#
+225#TW#tw.gif#Taiwan#
+226#TZ#tz.gif#Tanzania#
+227#UA#ua.gif#Ukraine#
+228#UG#ug.gif#Uganda#
+229#UM#um.gif#United States Minor Outlying Islands#
+230#US#us.gif#United States#
+231#UY#uy.gif#Uruguay#
+232#UZ#uz.gif#Uzbekistan#
+233#VA#va.gif#Holy See (Vatican City State)#
+234#VC#vc.gif#Saint Vincent and the Grenadines#
+235#VE#ve.gif#Venezuela#
+236#VG#vg.gif#Virgin Islands (British)#
+237#VI#vi.gif#Virgin Islands (U.S.)#
+238#VN#vn.gif#Viet Nam#
+239#VU#vu.gif#Vanuatu#
+240#WF#wf.gif#Wallis and Futuna#
+241#WS#ws.gif#Samoa#
+242#YE#ye.gif#Yemen#
+243#YT#yt.gif#Mayotte#
+244#ZA#za.gif#South Africa#
+245#ZM#zm.gif#Zambia#
+246#ZW#zw.gif#Zimbabwe#

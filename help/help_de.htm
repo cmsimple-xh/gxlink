@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>GX Link-Plugin für CMSimple</title>
+</head>
+<body>
+<p><strong><u>Über das GX Link-Plugin für CMSimple</u></strong></p>
+<p>Das GX Link-Plugin ist ein Skript zum Verwalten von kategorisierten Linksammlungen ähnlich wie Webkataloge.</p>
+<p>Es ist ein Plugin für <a href="http://www.cmsimple-xh.org" target="_blank">CMSimple (XH)</a>.</p>
+<br>
+<p><strong><u>Merkmale</strong></u></p>
+<ul>
+<li>Textbasiert (es wird keine Datenbank wie MySQL benötigt)</li>
+<li>Illimitierte Datenbanken, Kategorien und Links</li>
+<li>Mehrsprachig</li>
+<li>Extrem konfigurierbar auf Grund von einer Vielzahl von Parametern</li>
+<li>Anpassbares Layout durch CSS</li>
+<li>Verwalter-Interface</li>
+<li>Prüfen auf ungültige Links und die Möglichkeit, diese (nicht) anzuzeigen</li>
+<li>Möglichkeit für Besucher Links hinzuzufügen mit Mailbenachrichtigung für den Verwalter</li>
+<li>Annehmen oder ablehnen von Links durch den Verwalter</li>
+<li>Neue Links anzeigen</li>
+<li>Suchfunktion für Links</li>
+<li>...</li>
+</ul>
+<br>
+<p><strong><u>Wie wird das Plugin benutzt?<p></strong></u>
+<p><strong>GXLink installieren</strong></p>
+<p>Einfach das Plugin in den Plugin-Ordner von CMSimple kopieren. Das war es schon!!!</p>
+<p>Ok, wenn etwas geändert und gespeichert werden soll, dann müssen die Rechte gewisser Ordner und Dateien durch chmod angepasst werden. Im Plugin-Ordner gibt es vier Ordner (config, css, languages und DBlink bzw. eigene DB-Ordner), die mittels chmod in 777 geändert werden müssen. Das Gleiche gilt für die Dateien in diesen Ordnern.</p> 
+<p>Ferner muss das Plugin im Inhalt aufgerufen werden. Dazu genügt es einfach die folgende Linie dorthin zu platzieren, wo das Resultat hin soll:</p> 
+<p><i>{{{gxlink();}}}</i></p>
+<p>Der Funktion können zwei weitere Variablen übergeben werden: Die Kategorie und der Name einer anderen Datenbank (Standard "DBlink"). 
+Dieses Beispiel ruft nur die Kategorie "Search Engines" aus der Standard-Datenbank auf:</p>
+<p><i>{{{gxlink("Search Engines");}}}</i></p>
+<p><strong>GXLink konfigurieren</strong></p>
+<p>Es gibt eine Reihe von Variablen in der Konfiguration, die man sich ansehen und nach den eigenen Anforderungen anpassen kann.</p>
+<table style="text-align: left; width: 100%;" border="1"  cellpadding="2" cellspacing="2">
+<tr>
+<td style="text-align: center;"><strong>Variable</strong></td>
+<td style="text-align: center;"><strong>Wert / Erklärung</strong></td>
+</tr>
+<tr>
+<td>allowLinkPosting</td>
+<td>1 = erlaubt dass Besucher Links hinzufügen<br>
+0 = nicht erlaubt</td>
+</tr>
+<tr>
+<td>showAllLinksDefault</td>
+<td>1 = zeigt alle Links auf der Startseite<br>
+0 = nicht</td>
+</tr>
+<tr>
+<td>showApprovedLinksOnly</td>
+<td>1 = zeigt nur angenommene Links<br>
+0 = zeigt auch die (noch) nicht angenommenen Links</td>
+</tr>
+<tr>
+<td>doNotShowBroken</td>
+<td>0 = zeigt auch ungültige Links an<br>
+1 = zeigt ungültige Links nicht an</td>
+</tr>
+<tr>
+<td>showNewLinks</td>
+<td>1 = zeigt neue Links an<br>
+0 = nicht</td>
+</tr>
+<tr>
+<td>iNewLinks</td>
+<td>Anzahl von neuen Links, die angezeigt werden</td>
+</tr>
+<tr>
+<td>showIP</td>
+<td>0 = nicht anzeigen<br>
+1 = zeigt die IP der Person, die einen (noch) nicht angenommenen Link gepostet hat</td>
+</tr>
+<tr>
+<td>showTitle</td>
+<td>1 = Titel anzeigen<br>
+0 = nicht</td>
+</tr>
+</tr>
+<tr>
+<td>showSearch</td>
+<td>1 = Suchfunktion anzeigen<br>
+0 = nicht</td>
+</tr>
+<tr>
+<td>showDescr</td>
+<td>1 = Beschreibung der Links in Tabelle anzeigen<br>
+0 = Beschreibung der Links als Tooltip anzeigen</td>
+</tr>
+<tr>
+<td>notifyMail</td>
+<td>0 = nicht per Mail benachrichtigen<br>
+1 = per Mail benachrichtigen wenn ein neuer Link hinzugefügt wurde</td>
+</tr>
+<tr>
+<td>mailTo</td>
+<td>Mail-Adresse, der benachrichtigt werden soll. Mehrere Adressen können durch Kommata getrennt werden.</td>
+</tr>
+<tr>
+<td>defaultCountry</td>
+<td>Standard Land bei Länderauswahl (!Groß-/Kleinschreibung).</td>
+</tr>
+<tr>
+<td>showCats</td>
+<td>Wo Kategorien anzeigen?<br>
+0 = nicht anzeigen<br>
+1 = oben<br>
+2 = unten<br>
+3 = oben und unten<br> 
+4 = links<br>
+5 = rechts</td>
+</tr>
+<tr>
+<td>numCatRow</td>
+<td>Anzahl von Kategorien pro Reihe (wenn showCats auf oben oder unten steht)</td>
+</tr>
+<tr>
+<tr>
+<td>color1</td>
+<td>Farbe der 1. Linkreihe</td>
+</tr>
+<tr>
+<tr>
+<td>color2</td>
+<td>Farbe der 2. Linkreihe</td>
+</tr>
+<tr>
+<tr>
+<td>pageWidth</td>
+<td>Breitenangabe der Seite</td>
+</tr>
+<tr>
+<tr>
+<td>tableAlign</td>
+<td>Ausrichtung der Tabelle<br> 
+Werte = "Left", "Center", "Right"</td>
+</tr>
+<tr>
+<td>showCountryPic</td>
+<td>1= zeigt Land als Bild an falls vorhanden<br> 
+0 = zeigt Land als ISO-Kode</td>
+</tr>
+<tr>
+<td>minFillOutTime</td>
+<td>Minimum an Zeit in Sekunden, die gebraucht werden könnte um das Formular zum Hinzufügen von Links auszufüllen<br> 
+Spamschutz</td>
+</tr>
+<tr>
+<td>BadWordsFile</td>
+<td>Name der Datei mit den bösen Worten<br>
+Das erste Zeichen ist die "Bewertungszahl". Je höher diese Zahl umso schlimmer das Wort. Das könnte in Zukunft noch sinnvoll sein. 
+</td>
+</tr>
+<tr>
+<td>BadWordRating</td>
+<td>Toleranz für das Filtern<br>
+Der Filter entfernt nur Wörter mit einer höheren Bewertung als dieser Wert. 
+</td>
+</tr>
+<tr>
+<td>BadWordshowLetters</td>
+<td>Anzahl der Buchstaben, die von einem bösen Wort angezeigt werden sollen
+</td>
+</tr>
+<tr>
+<td>BadWordreplaceChar</td>
+<td>Zeichen, das als Platzhalter in bösen Worten gebraucht werden soll
+</td>
+</tr>
+</table>
+<br>
+<p><strong><u>Garantie</strong></u></p>
+<p>Es gibt <strong>keine Garantie</strong> bei der Benutzung des Plugins. Es wird auf eigenes Risiko benutzt und es wird keine Haftung für Datenverluste übernommen, die ggf. durch den Gebrauch von GXLink entstehen.</p> 
+<br>
+<p><strong><u>Wo finde ich GXLink?</strong></u></p>
+<p>Die aktuelle Version von GXLink kann man <a href="http://xtc.xhonneux.com/?Projekte/GXLink/Download">hier downloaden</a>.</p>
+<br>
+<p><strong><u>Hilfe und Fragen</strong></u></p>
+<p>Hilfe und Fragen bitte nur im <a href="http://www.cmsimpleforum.com/">CMSimple-Forum</a> und/oder <a href="http://www.cmsimplewiki.com/">CMSimple-Wiki</a>.</p>
+<br>
+<p><strong><u>Verbesserungsvorschläge für GXLink?</strong></u></p>
+<p>Ich bin kein PHP-Experte. Wenn es also Möglichkeiten gibt, das Plugin zu verbessern, würde ich mich über eine <a href="http://xtc.xhonneux.com/#footer-wrapper">Rückmeldung mittels meiner Website</a> freuen.</p>
+<p>&nbsp;</p>
+<p>© 2007-2015 by Gerd Xhonneux, xtc</p>
+</body>
