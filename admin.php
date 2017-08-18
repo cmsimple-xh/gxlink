@@ -401,7 +401,7 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
 						$o .= '<select name="country">';
 							$countries=$db->executeQuery("SELECT * FROM countries ORDER BY iso");
 							while($countries->next()){   
-								list($nr, $iso, $pic, $desc_en)=$countries->getCurrentValues(); 
+								list($nr, $iso, $pic, $desc_en)=$countries->getCurrentValues() + array(null, null, null, null); 
 								if ($iso == $country) {
 									$o .= '<OPTION value="'.$iso.'" selected>'.$iso.' ('.$desc_en.')'.'</OPTION>'.chr(13);
 								} else {
@@ -489,8 +489,8 @@ if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministrati
 								$o .= "<td class=\"links\" width=\"10\">".$i."</td><td class=\"links\" width=\"150\"><a href=\"".$url."\" title=\"".$descr."\" target=\"_blank\">".$name."</a><br><a href=\"".$refbase."&catnr=".$catnr."&edlink=".$nr."\">[".$plugin_tx['gxlink']['editlink']."]</a> <a href=\"".$refbase."&catnr=".$catnr."&checklink=".urlencode($url)."\">[".$plugin_tx['gxlink']['checklink']."]</a><br><a href=\"".$refbase."&catnr=".$catnr."&app=".$nr."&linkstatus=".$linkstatus."\">[".$infW."]</a> <a href=\"".$refbase."&catnr=".$catnr."&delink=".$nr."\" onClick=\"return confirmSubmit('".$plugin_tx['gxlink']['confirm_dellink']."');\">[".$plugin_tx['gxlink']['dellink']."]</a> </td>"."<td><a href=\"".$url."\" target=\"_blank\" class=\"links\">".$url."</a></td>"."<td align=\"right\">".$error[$code]."</td>";
 								$db->executeQuery("UPDATE links SET statuscode='$code' WHERE url='$url'");
 								flush();
-						} else {	
-								if ($statuscode	== 0 || $statuscode >= 400) {
+						} else {
+								if ($statuscode	=== 0 || $statuscode >= 400) {
 										$dispError = $error[$statuscode];
 								} else {
 										$dispError = '';
