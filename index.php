@@ -38,7 +38,7 @@ $DB_DIR               = $gxlink_pluginfolder.'/';                         # fold
 
 include_once($API_HOME_DIR.'txt-db-api.php');
 
-function GXLink($catname,$database) {
+function GXLink($catname = null,$database = null) {
 
 global $su, $sn, $sl, $plugin_cf, $plugin_tx, $pth, $plugin, $hjs;
 
