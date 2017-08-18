@@ -3,31 +3,6 @@
 if(function_exists('XH_wantsPluginAdministration') && XH_wantsPluginAdministration('gxlink')
 			|| isset($gxlink)) {
 
-  //check if register_globals is turned OFF
-  if (!ini_get ("register_globals")){
-      extract($HTTP_GET_VARS);
-      extract($HTTP_POST_VARS);
-      extract($HTTP_COOKIE_VARS);
-      extract($HTTP_ENV_VARS);
-      extract($HTTP_SERVER_VARS);
-  }
-
-/*
-// Another possibility to
-// Emulate register_globals on
-if (!ini_get('register_globals')) {
-    $superglobals = array($_SERVER, $_ENV,
-        $_FILES, $_COOKIE, $_POST, $_GET);
-    if (isset($_SESSION)) {
-        array_unshift($superglobals, $_SESSION);
-    }
-    foreach ($superglobals as $superglobal) {
-        extract($superglobal, EXTR_SKIP);
-    }
-    ini_set('register_globals', true);
-}
-*/
-
   $gxlink_version = "XH 1.5";
   $gxlink_plugin            = basename(dirname(__FILE__),'/');
   $gxlink_pluginfolder      = $pth['folder']['plugins'].$gxlink_plugin;      # folder where the plugin resides
