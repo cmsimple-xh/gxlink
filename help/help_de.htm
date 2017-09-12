@@ -1,48 +1,52 @@
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>GX Link-Plugin fÃ¼r CMSimple</title>
+<title>GX Link-Plugin für CMSimple(_XH)</title>
 </head>
 <body>
-<p><strong><u>Ãœber das GX Link-Plugin fÃ¼r CMSimple</u></strong></p>
-<p>Das GX Link-Plugin ist ein Skript zum Verwalten von kategorisierten Linksammlungen Ã¤hnlich wie Webkataloge.</p>
-<p>Es ist ein Plugin fÃ¼r <a href="http://www.cmsimple-xh.org" target="_blank">CMSimple (XH)</a>.</p>
-<br>
-<p><strong><u>Merkmale</strong></u></p>
+<p><strong><u>Das Plugin GXLink für CMSimple(_XH)</u></strong><br><br>
+Das GXLink-Plugin ist ein Script zum Verwalten von kategorisierten Linksammlungen ähnlich wie Webkataloge.<br>
+Mit ihm können Linkvorschläge durch Dritte vorgeschlagen werden, die nach einer redaktionellen Bearbeitung durch den Administrator der Website für den Besucher der Website freigeschaltet werden können.</p>
+<p><strong>Merkmale</strong></p>
 <ul>
-<li>Textbasiert (es wird keine Datenbank wie MySQL benÃ¶tigt)</li>
+<li>Textbasiert (es wird keine Datenbank wie MySQL benötigt)</li>
 <li>Illimitierte Datenbanken, Kategorien und Links</li>
 <li>Mehrsprachig</li>
 <li>Extrem konfigurierbar auf Grund von einer Vielzahl von Parametern</li>
 <li>Anpassbares Layout durch CSS</li>
 <li>Verwalter-Interface</li>
-<li>PrÃ¼fen auf ungÃ¼ltige Links und die MÃ¶glichkeit, diese (nicht) anzuzeigen</li>
-<li>MÃ¶glichkeit fÃ¼r Besucher Links hinzuzufÃ¼gen mit Mailbenachrichtigung fÃ¼r den Verwalter</li>
+<li>Prüfen auf ungültige Links und die Möglichkeit, diese (nicht) anzuzeigen</li>
+<li>Möglichkeit für Besucher Links hinzuzufügen mit Mailbenachrichtigung für den Verwalter</li>
 <li>Annehmen oder ablehnen von Links durch den Verwalter</li>
 <li>Neue Links anzeigen</li>
-<li>Suchfunktion fÃ¼r Links</li>
+<li>Suchfunktion für Links</li>
 <li>...</li>
 </ul>
-<br>
-<p><strong><u>Wie wird das Plugin benutzt?<p></strong></u>
-<p><strong>GXLink installieren</strong></p>
-<p>Einfach das Plugin in den Plugin-Ordner von CMSimple kopieren. Das war es schon!!!</p>
-<p>Ok, wenn etwas geÃ¤ndert und gespeichert werden soll, dann mÃ¼ssen die Rechte gewisser Ordner und Dateien durch chmod angepasst werden. Im Plugin-Ordner gibt es vier Ordner (config, css, languages und DBlink bzw. eigene DB-Ordner), die mittels chmod in 777 geÃ¤ndert werden mÃ¼ssen. Das Gleiche gilt fÃ¼r die Dateien in diesen Ordnern.</p> 
-<p>Ferner muss das Plugin im Inhalt aufgerufen werden. Dazu genÃ¼gt es einfach die folgende Linie dorthin zu platzieren, wo das Resultat hin soll:</p> 
-<p><i>{{{gxlink();}}}</i></p>
-<p>Der Funktion kÃ¶nnen zwei weitere Variablen Ã¼bergeben werden: Die Kategorie und der Name einer anderen Datenbank (Standard "DBlink"). 
-Dieses Beispiel ruft nur die Kategorie "Search Engines" aus der Standard-Datenbank auf:</p>
-<p><i>{{{gxlink("Search Engines");}}}</i></p>
-<p><strong>GXLink konfigurieren</strong></p>
+<p><strong>Systemvoraussetzungen:</strong></p>
+<p>Voraussetzungen für die aktuelle Version 1.5 (vom 21.05.2013) von GXLink:<br>
+Mit CMSimple 3.x, CMSimple_XH 1.6.4, 1.6.6, 1.6.10 erfolgreich getestet (An der Kompabilität für CMSimple_XH 1.7.x wird derzeit gearbeitet).<br>
+Mit PHP 5.3 und 5.6 erfolgreich getestet (An der Kompabilität für PHP 7.0 bzw. 7.1 wird gearbeitet).</p> 
+<p><strong>Installation:</strong></p>
+<ul>
+<li>Das Plugin GXLink von einer der unten angegebenen URL als gepackte Datei herunterladen.</li>
+<li>Die herunter geladene Datei (beispielsweise mit WinZip) entpacken.</li>
+<li>Das entpackte Plugin mit Hilfe eines FTP-Programmes (bspw. Filezilla) in das Pluginverzeichnis der CMSimple_XH Installation auf dem Server kopieren (IHRE-DOMAIN.DE/CMSIMPLE_XH-VERZEICHNIS/Plugins/gxlink/).</li>
+<li>Die Plugin-Verzeichnisse config, css, languages und DBlink und die darin enthaltenen Dateien mit Schreibrechten (755 bzw. 777) versehen.</li>
+<li>Auf der Seite auf der GXLink eingebunden werden soll wird "{{{gxlink();}}}" angegeben und gespeichert. Alternativ zu diesem Plugin Aufruf kann dies auch mit zwei zusätzlichen Variablen erfolgen. (a) unter Angabe einer anzuzeigenden Kategorie (Bsp. {{{gxlink("Search Engines");}}} ), b) unter Angabe einer anderen Datenbank als die Standard-Datenbank "DBlink")</li>
+<li>Im Adminmenü unter "Plugins" => "Gxlink" das Plugin aufrufen.</li>
+<li>Unter "Einstellungen" können die eigenen Kategorien mit einer optionalen Beschreibung angelegt werden.</li>
+<li>Unter  "Stylesheet" kann (bei Bedarf) das Layout der Linksammlung aus Anwendersicht den individuellen Bedürfnissen angepasst werden.</li>
+<li>Unter "Konfiguration" kann die tabellarische Übersicht der anzuzeigenden Links laut der unten aufgeführten Konfigurationstabelle den eigenen Bedürfnissen angepasst werden.</li>
+</ul>
+<p><strong>Einstellungen / Konfiguration:</strong></p>
 <p>Es gibt eine Reihe von Variablen in der Konfiguration, die man sich ansehen und nach den eigenen Anforderungen anpassen kann.</p>
 <table style="text-align: left; width: 100%;" border="1"  cellpadding="2" cellspacing="2">
 <tr>
 <td style="text-align: center;"><strong>Variable</strong></td>
-<td style="text-align: center;"><strong>Wert / ErklÃ¤rung</strong></td>
+<td style="text-align: center;"><strong>Wert / Erklärung</strong></td>
 </tr>
 <tr>
 <td>allowLinkPosting</td>
-<td>1 = erlaubt dass Besucher Links hinzufÃ¼gen<br>
+<td>1 = erlaubt dass Besucher Links hinzufügen<br>
 0 = nicht erlaubt</td>
 </tr>
 <tr>
@@ -57,8 +61,8 @@ Dieses Beispiel ruft nur die Kategorie "Search Engines" aus der Standard-Datenba
 </tr>
 <tr>
 <td>doNotShowBroken</td>
-<td>0 = zeigt auch ungÃ¼ltige Links an<br>
-1 = zeigt ungÃ¼ltige Links nicht an</td>
+<td>0 = zeigt auch ungültige Links an<br>
+1 = zeigt ungültige Links nicht an</td>
 </tr>
 <tr>
 <td>showNewLinks</td>
@@ -93,15 +97,15 @@ Dieses Beispiel ruft nur die Kategorie "Search Engines" aus der Standard-Datenba
 <tr>
 <td>notifyMail</td>
 <td>0 = nicht per Mail benachrichtigen<br>
-1 = per Mail benachrichtigen wenn ein neuer Link hinzugefÃ¼gt wurde</td>
+1 = per Mail benachrichtigen wenn ein neuer Link hinzugefügt wurde</td>
 </tr>
 <tr>
 <td>mailTo</td>
-<td>Mail-Adresse, der benachrichtigt werden soll. Mehrere Adressen kÃ¶nnen durch Kommata getrennt werden.</td>
+<td>Mail-Adresse, der benachrichtigt werden soll. Mehrere Adressen können durch Kommata getrennt werden.</td>
 </tr>
 <tr>
 <td>defaultCountry</td>
-<td>Standard Land bei LÃ¤nderauswahl (!GroÃŸ-/Kleinschreibung).</td>
+<td>Standard Land bei Länderauswahl (!Groß-/Kleinschreibung).</td>
 </tr>
 <tr>
 <td>showCats</td>
@@ -145,44 +149,52 @@ Werte = "Left", "Center", "Right"</td>
 </tr>
 <tr>
 <td>minFillOutTime</td>
-<td>Minimum an Zeit in Sekunden, die gebraucht werden kÃ¶nnte um das Formular zum HinzufÃ¼gen von Links auszufÃ¼llen<br> 
+<td>Minimum an Zeit in Sekunden, die gebraucht werden könnte um das Formular zum Hinzufügen von Links auszufüllen<br> 
 Spamschutz</td>
 </tr>
 <tr>
 <td>BadWordsFile</td>
-<td>Name der Datei mit den bÃ¶sen Worten<br>
-Das erste Zeichen ist die "Bewertungszahl". Je hÃ¶her diese Zahl umso schlimmer das Wort. Das kÃ¶nnte in Zukunft noch sinnvoll sein. 
+<td>Name der Datei mit den bösen Worten<br>
+Das erste Zeichen ist die "Bewertungszahl". Je höher diese Zahl umso schlimmer das Wort. Das könnte in Zukunft noch sinnvoll sein. 
 </td>
 </tr>
 <tr>
 <td>BadWordRating</td>
-<td>Toleranz fÃ¼r das Filtern<br>
-Der Filter entfernt nur WÃ¶rter mit einer hÃ¶heren Bewertung als dieser Wert. 
+<td>Toleranz für das Filtern<br>
+Der Filter entfernt nur Wörter mit einer höheren Bewertung als dieser Wert. 
 </td>
 </tr>
 <tr>
 <td>BadWordshowLetters</td>
-<td>Anzahl der Buchstaben, die von einem bÃ¶sen Wort angezeigt werden sollen
+<td>Anzahl der Buchstaben, die von einem bösen Wort angezeigt werden sollen
 </td>
 </tr>
 <tr>
 <td>BadWordreplaceChar</td>
-<td>Zeichen, das als Platzhalter in bÃ¶sen Worten gebraucht werden soll
+<td>Zeichen, das als Platzhalter in bösen Worten gebraucht werden soll
 </td>
 </tr>
 </table>
 <br>
-<p><strong><u>Garantie</strong></u></p>
-<p>Es gibt <strong>keine Garantie</strong> bei der Benutzung des Plugins. Es wird auf eigenes Risiko benutzt und es wird keine Haftung fÃ¼r Datenverluste Ã¼bernommen, die ggf. durch den Gebrauch von GXLink entstehen.</p> 
-<br>
-<p><strong><u>Wo finde ich GXLink?</strong></u></p>
-<p>Die aktuelle Version von GXLink kann man <a href="http://xtc.xhonneux.com/?Projekte/GXLink/Download">hier downloaden</a>.</p>
-<br>
-<p><strong><u>Hilfe und Fragen</strong></u></p>
-<p>Hilfe und Fragen bitte nur im <a href="http://www.cmsimpleforum.com/">CMSimple-Forum</a> und/oder <a href="http://www.cmsimplewiki.com/">CMSimple-Wiki</a>.</p>
-<br>
-<p><strong><u>VerbesserungsvorschlÃ¤ge fÃ¼r GXLink?</strong></u></p>
-<p>Ich bin kein PHP-Experte. Wenn es also MÃ¶glichkeiten gibt, das Plugin zu verbessern, wÃ¼rde ich mich Ã¼ber eine <a href="http://xtc.xhonneux.com/#footer-wrapper">RÃ¼ckmeldung mittels meiner Website</a> freuen.</p>
+<p><strong>Anleitungen für den laufenden Betrieb</strong></br></br>
+Für den "laufenden Betrieb" von GXLink befinden sich hier einige kurze Anleitungen mit grundsätzlichen Tätigkeiten:</p> 
+<p><u>Einen neuen Link im Frontend eintragen und dem Admin zur Prüfung und Bearbeitung vorschlagen.</u></br>
+Damit Besucher der Website einen Link für die Linksammlung vorschlagen können muss in der GXLink Konfiguration bei der Option "AllowLinkPosting" eine "1" eingetragen und gespeichert werden.
+Der Besucher kann dann am Ende der Link Auflistung im Bereich "Fügen Sie Ihren eigenen Link hier hinzu!" einen Linkvorschlag eintragen und mit der Betätigung von "Link hinzufügen" in GXLink speichern.
+In Abhängigkeit der Plugin Konfiguration  ist dieser neue Link nur für den Administrator sichtbar, der mittels einer Mail über den neuen Linkvorschlag per Mail informiert wird (NotifyMail=1).</p>
+<p><u>Einen zur Prüfung vorliegenden Link als Admin löschen / bearbeiten / freigeben</u></br>
+Für die Prüfung neu gemeldete Links werden im Adminmenü unter Plugins =>  GXlink => Einstellungen ausgewählt. Dort werden im Bereich "Nicht angenommene Links" alle neu eingereichten Links aufgelistet, die dann angenommen, editiert. bzw. gelöscht werden können.</p>
+<p><u>Einen vorhandenen (und schon freigegebenen Link) als Admin bearbeiten / löschen</u></br>
+Für die Prüfung, Bearbeitung und Löschung vorhandener Links wird im Adminmenü unter Plugins =>  GXlink => "Einstellungen" ausgewählt. In der Kategorie enthaltenen Links werden aufgelistet und können dort editiert, geprüft und gelöscht werden.</p>
+<p><strong>Garantie</strong></br></br>
+Es gibt keine Garantie bei der Benutzung des Plugins. Es wird auf eigenes Risiko benutzt und es wird keine Haftung für Datenverluste übernommen, die ggf. durch den Gebrauch von GXLink entstehen.</p> 
+<p><strong>Wo finde ich GXLink?</strong></p>
+<p>Seinen Ursprung hat GXLink bei <a href="https://xtc.xhonneux.com/?Projekte/GXLink">xtc.xhonneux.com</a> und die aktuelle Version von GXLink kann bei <a href="https://github.com/cmsimple-xh/gxlink">Github</a> herunter geladen werden.</p>
+<p><strong>Hilfe und Fragen</strong></p>
+<p>Hilfe und Fragen bitte nur im <a href="http://www.cmsimpleforum.com/">CMSimple_XH Forum</a> und/oder bei <a href="https://github.com/cmsimple-xh/gxlink">Github</a> stellen.<br>
+Im <a href="http://cmsimplewiki-com.keil-portal.de/doku.php">archivierten CMSimple-Wiki</a> können Informationen zu GXLink unter CMSimple 3.x eingesehen werden.</p>
+<p><strong>Verbesserungsvorschläge für GXLink?</strong></p>
+<p>Ich bin kein PHP-Experte. Wenn es also Möglichkeiten gibt, das Plugin zu verbessern, würde ich mich über eine <a href="http://www.cmsimpleforum.com/">Rückmeldung im CMSimple_XH Forum</a> bei <a href="https://github.com/cmsimple-xh/gxlink">Github</a> bzw. auf <a href="https://xtc.xhonneux.com/#footer-wrapper">meiner Website</a> freuen.</p>
 <p>&nbsp;</p>
-<p>Â© 2007-2015 by Gerd Xhonneux, xtc</p>
+<p>© 2007-2012 by Gerd Xhonneux, xtc</p>
 </body>
